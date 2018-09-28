@@ -45,7 +45,9 @@ $next = get_next_post();
             <? if ($file2['url'] != null) { ?>
                 <a class="link" download href="<?= $file2['url'] ?>">Скачать протоколы соровнований </a>
             <? } ?>
-
+            <p class="autor_title">
+                Автор: <?= get_the_author();?>
+            </p>
 
             <?php endwhile; else : ?>
                 <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
