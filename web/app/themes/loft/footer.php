@@ -23,6 +23,10 @@
 
         </div>
         <div class="copyright-wrap">
+            <a href="" class="social_link"><span class="icon-facebook"></span></a>
+            <a href="https://vk.com/id195631390" class="social_link"><span class="icon-vk"></span></a>
+            <a href="" class="social_link"><span class="icon-insta"></span></a>
+
             <div class="copyright-text">&copy;&nbsp;2012-2018 <a href="http://run-ski.ru/" class="copyright-text__link"> run-ski.ru</a> </div>
         </div>
     </div>

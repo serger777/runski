@@ -46,7 +46,7 @@ $next = get_next_post();
                 <a class="link" download href="<?= $file2['url'] ?>">Скачать протоколы соровнований </a>
             <? } ?>
             <p class="autor_title">
-                Автор: <?= get_the_author()->name;?>
+                Автор: <span><?= get_the_author_meta('first_name'); ?></span>
             </p>
 
             <?php endwhile; else : ?>
