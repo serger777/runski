@@ -23,7 +23,7 @@
 
         </div>
         <div class="copyright-wrap">
-            <div class="copyright-text">&copy;&nbsp;2012-2018<a href="#" class="copyright-text__link"> run-ski.ru</a></div>
+            <div class="copyright-text">&copy;&nbsp;2012-2018 <a href="http://run-ski.ru/" class="copyright-text__link"> run-ski.ru</a> </div>
         </div>
     </div>
 </footer>
