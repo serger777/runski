@@ -1,0 +1,26 @@
+.article-info{
+  padding: 25px 0 10px;
+
+  .post-date{
+    font-size: 1.4rem;
+  }
+}
+.img_thumb {
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  background-position: 50% 10%;
+}
+.article-text{
+  p{
+  }
+}
+.post-title a {
+  font-size: 1.3rem;
+  font-family: "Lato";
+  color: #212121;
+  line-height: 1.4rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
