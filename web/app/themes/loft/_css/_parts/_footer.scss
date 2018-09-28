@@ -68,7 +68,7 @@
     display: inline-block;
     margin-bottom: 5px;
     @media (max-width: 586px){
-      font-size: 10px;
+      font-size: 10px!important;
     }
   }
 }
