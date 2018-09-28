@@ -25,7 +25,7 @@ $next = get_next_post();
             if ($meta_values != null) {
                 ?>
                 <div class="k2_video">
-                    <iframe width="100%" height=""
+                    <iframe width="100%" height="300px"
                             src="https://www.youtube.com/embed/<?= $meta_values ?>"
                             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
