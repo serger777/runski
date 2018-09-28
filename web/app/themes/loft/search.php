@@ -17,7 +17,10 @@
                             <p><?php the_excerpt() ?></p>
                             <span>Категория: <?php the_category(', ') ?></span>
                         </div>
+
                     <?php endwhile; ?>
+                    <?php echo wpbeginner_numeric_posts_nav();
+                    ?>
                 <?php
                 else :
                     echo "Извините по Вашему результату ничего не найдено";
