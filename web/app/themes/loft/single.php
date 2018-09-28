@@ -19,13 +19,13 @@ $next = get_next_post();
                 <? the_content(false); ?>
             </div>
 
-            <? $meta_values = get_post_meta($post->ID, $key, false);
-
+            <? $meta_values = get_post_meta($post->ID, $key, true);
 
 
             if ($meta_values > 0) {
                 ?>
-                <iframe width="100%" height="415px" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'видео', true) ?>"
+                <iframe width="100%" height="415px"
+                        src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'видео', true) ?>"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <? } ?>
 
@@ -38,9 +38,13 @@ $next = get_next_post();
             $file2 = (get_post_meta($post->ID, 'файл2', false));
             $file2 = get_field('файл');
             ?>
+            <? if ($file['url'] != null) { ?>
+                <a class="link" download href="<?= $file['url'] ?>">Скачать протоколы соровнований </a> <br>
+            <? } ?>
+            <? if ($file2['url'] != null) { ?>
+                <a class="link" download href="<?= $file2['url'] ?>">Скачать протоколы соровнований </a>
+            <? } ?>
 
-            <a class="link" download href="<?= $file['url'] ?>">Скачать протоколы соровнований </a>
-            <a class="link" download href="<?= $file2['url'] ?>">Скачать протоколы соровнований </a>
 
             <?php endwhile; else : ?>
                 <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
