@@ -34,7 +34,7 @@
 </div>
 <!-- wrapper_end-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="<?php bloginfo("template_directory"); ?>/js/main.js"></script>
+<script src="<?php bloginfo("template_directory"); ?>/_js/main.js"></script>
 
 
 <?php wp_footer(); ?>
