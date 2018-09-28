@@ -19,13 +19,13 @@ $next = get_next_post();
                 <? the_content(false); ?>
             </div>
 
-            <? $meta_values = get_post_meta($post->ID, $key, true);
+            <? $meta_values = get_post_meta($post->ID, видео, true);
 
 
-            if ($meta_values > 0) {
+            if ($meta_values != null) {
                 ?>
                 <iframe width="100%" height="415px"
-                        src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'видео', true) ?>"
+                        src="https://www.youtube.com/embed/<?= $meta_values ?>"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <? } ?>
 
@@ -34,13 +34,14 @@ $next = get_next_post();
             $file = (get_post_meta($post->ID, 'файл', false));
             $file = get_field('файл');
             ?>
-            <?php
-            $file2 = (get_post_meta($post->ID, 'файл2', false));
-            $file2 = get_field('файл');
-            ?>
+
             <? if ($file['url'] != null) { ?>
                 <a class="link" download href="<?= $file['url'] ?>">Скачать протоколы соровнований </a> <br>
             <? } ?>
+            <?php
+            $file2 = (get_post_meta($post->ID, 'файл2', false));
+            $file2 = get_field('файл2');
+            ?>
             <? if ($file2['url'] != null) { ?>
                 <a class="link" download href="<?= $file2['url'] ?>">Скачать протоколы соровнований </a>
             <? } ?>
