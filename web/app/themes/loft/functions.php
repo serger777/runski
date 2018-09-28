@@ -1,4 +1,5 @@
 <?php
+define('WP_CACHE', true);
 add_theme_support('menus');
 add_theme_support( 'post-thumbnails' );
 //add_filter('nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10, 4);
