@@ -2,8 +2,8 @@ User-agent: *               # общие правила для роботов, �
                             # т.к. для них правила ниже
 Disallow: /cgi-bin          # папка на хостинге
 Disallow: /?                # все параметры запроса на главной
-Disallow: /wp-              # все файлы WP: /wp-json/, /wp-includes, /wp-content/plugins
-Disallow: /wp/              # если есть подкаталог /wp/, где установлена CMS (если нет,
+Disallow: /web/wp/wp-              # все файлы WP: /web/wp/wp-json/, /web/wp/wp-includes, /web/wp/wp-content/plugins
+
                             # правило можно удалить)
 Disallow: *?s=              # поиск
 Disallow: *&s=              # поиск
@@ -25,8 +25,8 @@ Allow: */uploads            # открываем папку с файлами up
 User-agent: GoogleBot       # правила для Google (комментарии не дублирую)
 Disallow: /cgi-bin
 Disallow: /?
-Disallow: /wp-
-Disallow: /wp/
+Disallow: /web/wp/wp-
+Disallow: /web/wp/
 Disallow: *?s=
 Disallow: *&s=
 Disallow: /search/
@@ -41,19 +41,19 @@ Disallow: /xmlrpc.php
 Disallow: *utm*=
 Disallow: *openstat=
 Allow: */uploads
-Allow: /*/*.js              # открываем js-скрипты внутри /wp- (/*/ - для приоритета)
-Allow: /*/*.css             # открываем css-файлы внутри /wp- (/*/ - для приоритета)
-Allow: /wp-*.png            # картинки в плагинах, cache папке и т.д.
-Allow: /wp-*.jpg            # картинки в плагинах, cache папке и т.д.
-Allow: /wp-*.jpeg           # картинки в плагинах, cache папке и т.д.
-Allow: /wp-*.gif            # картинки в плагинах, cache папке и т.д.
-Allow: /wp-admin/admin-ajax.php # используется плагинами, чтобы не блокировать JS и CSS
+Allow: /*/*.js              # открываем js-скрипты внутри /web/wp/wp- (/*/ - для приоритета)
+Allow: /*/*.css             # открываем css-файлы внутри /web/wp/wp- (/*/ - для приоритета)
+Allow: /web/wp/wp-*.png            # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-*.jpg            # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-*.jpeg           # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-*.gif            # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-admin/admin-ajax.php # используется плагинами, чтобы не блокировать JS и CSS
 
 User-agent: Yandex          # правила для Яндекса (комментарии не дублирую)
 Disallow: /cgi-bin
 Disallow: /?
-Disallow: /wp-
-Disallow: /wp/
+Disallow: /web/wp/wp-
+Disallow: /web/wp/wp/
 Disallow: *?s=
 Disallow: *&s=
 Disallow: /search/
@@ -68,11 +68,11 @@ Disallow: /xmlrpc.php
 Allow: */uploads
 Allow: /*/*.js
 Allow: /*/*.css
-Allow: /wp-*.png
-Allow: /wp-*.jpg
-Allow: /wp-*.jpeg
-Allow: /wp-*.gif
-Allow: /wp-admin/admin-ajax.php
+Allow: /web/wp/wp-*.png
+Allow: /web/wp/wp-*.jpg
+Allow: /web/wp/wp-*.jpeg
+Allow: /web/wp/wp-*.gif
+Allow: /web/wp/wp-admin/admin-ajax.php
 Clean-Param: utm_source&utm_medium&utm_campaign # Яндекс рекомендует не закрывать
                             # от индексирования, а удалять параметры меток,
                             # Google такие правила не поддерживает
