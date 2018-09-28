@@ -1,4 +1,4 @@
-@import '_parts/font.scss';
+@import '_parts/font';
 
 html {
   font-size: 14px;
@@ -21,7 +21,7 @@ img {
 p {
   font-size: 1rem;
   font-family: "Lato", sans-serif;
-  color: rgb(114, 114, 114);
+  color: black;
   line-height: 1.4rem;
   font-weight: normal;
 }
@@ -33,23 +33,14 @@ p {
   overflow: hidden;
 }
 
-@import "_parts/header.scss";
-@import "_parts/search_form.scss";
+@import "_parts/header";
+@import "_parts/search_form";
 
 .main-content {
   width: 100%;
   position: relative;
   z-index: 20;
-  &:after {
-    background-image: url(../img/triangle-white.png);
-    content: '';
-    position: absolute;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 260px;
-    bottom: -259px;
-    z-index: 5;
-  }
+
 }
 
 .content-wrapper {
@@ -79,7 +70,6 @@ p {
     }
   }
   p {
-    margin:0 0 30px 0;
   }
 }
 
@@ -87,8 +77,8 @@ li {
   margin-bottom: 25px;
 }
 
-@import "_parts/list_posts.scss";
-@import "_parts/article-page.scss";
+@import "_parts/list_posts";
+@import "_parts/article-page";
 /* main-style post*/
 .post-date {
   font-size: 1rem;
@@ -114,7 +104,7 @@ li {
   }
 }
 
-@import "_parts/sidebar.scss";
-@import "_parts/pagination.scss";
-@import "_parts/footer.scss";
-@import "_parts/wp_style.scss";
+@import "_parts/sidebar";
+@import "_parts/pagination";
+@import "_parts/footer";
+@import "_parts/wp_style";

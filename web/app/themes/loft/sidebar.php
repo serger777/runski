@@ -11,7 +11,7 @@
 
                 foreach ($categories as $category) {
                     echo '<li class="category-list__item"> <a class="category-list__item__link" href="' . get_category_link($category->term_id) . '" title="' . sprintf(__("View all posts in %s"),
-                            $category->name) . '" ' . '>' . $category->name . '</a>  ';
+                            $category->name) . '" ' . '>' . $category->name . '</a> <span> '. $category->count . '</span>  ';
                     echo '<ul class="category-list__inner">';
 
                     $parent_id = $category->term_id;
@@ -19,12 +19,12 @@
                         'child_of' => $parent_id,
                         'hide_empty' => 0
                     ));
-                    if ($sub_cats) {
-                        foreach ($sub_cats as $cat) {
-                            echo '<li class="category-list__item"> <a class="category-list__item__link" href="' . get_category_link($cat->term_id) . '" title="' . sprintf(__("View all posts in %s"),
-                                    $cat->name) . '" ' . '>' . $cat->name . '</a> </li> ';
-                        }
-                    }
+//                    if ($sub_cats) {
+//                        foreach ($sub_cats as $cat) {
+//                            echo '<li class="category-list__item"> <a class="category-list__item__link" href="' . get_category_link($cat->term_id) . '" title="' . sprintf(__("View all posts in %s"),
+//                                    $cat->name) . '" ' . '>' . $cat->name . '</a> </li> ';
+//                        }
+//                    }
                     echo '</li></ul>';
                 }
                 ?>
@@ -56,7 +56,7 @@
     </div>
     <div class="sidebar__sidebar-item">
         <div class="sidebar-item__title">Новости месяца</div>
-        <ul class="category-list">
+        <ul class="category-list wp_calendar">
             <?php get_calendar(); ?>
         </ul>
     </div>

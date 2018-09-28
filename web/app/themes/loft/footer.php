@@ -13,8 +13,7 @@
 <footer class="main-footer">
     <div class="content-footer">
         <div class="bottom-menu">
-            <ul class="b-menu__list">
-                    <?
+                         <?
 
                     wp_nav_menu(array(
                         'menu' => 'header_menu',
@@ -22,11 +21,9 @@
                     ));
                     ?>
 
-
-            </ul>
         </div>
         <div class="copyright-wrap">
-            <div class="copyright-text">run-ski<a href="#" class="copyright-text__link"> 2012-2018</a></div>
+            <div class="copyright-text">&copy;&nbsp;2012-2018<a href="#" class="copyright-text__link"> run-ski.ru</a></div>
         </div>
     </div>
 </footer>

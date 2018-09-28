@@ -1,3 +1,32 @@
+@media (max-width: 586px){
+  .post-wrap {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+.content{
+  padding: 0;
+  margin: 0;
+}
+  .menu{
+    flex-direction: column;
+  }
+  .menu li{
+    text-align: left;
+  }
+  .main-navigation{
+    padding: 10px;
+    .nav-list{
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .article-text{
+    padding: 10px;
+  }
+  .sidebar{
+    display: none!important;
+  }
+}
 
 
 @media screen and(max-width: 768px){
@@ -6,7 +35,6 @@
   }
   .top-header__wrap{
     flex-wrap: wrap;
-    height: 400px;
     .logotype-block{
       flex-basis: 100%;
     }
@@ -29,6 +57,7 @@
 
 
   .content-wrapper{
+    padding: 0;
     flex-wrap: wrap;
     .content{
 

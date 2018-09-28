@@ -26,8 +26,8 @@
   padding: 0;
 
   &__item {
-    border: 1px solid rgb(0, 151, 167);
-    border-radius: 5px;
+    border-bottom: 1px dotted #0097a7;
+    /* border-radius: 5px; */
     list-style: none;
     display: inline-block;
     margin: 5px 8px 5px 0;
@@ -88,4 +88,17 @@
   line-height: 1.143rem;
   font-weight: bold;
   text-decoration: none;
+}
+.wp_calendar{
+  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
+  a{
+    font-size: 1.3rem;
+    font-family: "Lato", sans-serif;
+    color: rgb(33, 33, 33);
+    display: inline-block;
+
+    border-bottom: 1px solid black;
+  }
+
 }
