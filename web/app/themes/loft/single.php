@@ -64,17 +64,17 @@ $next = get_next_post();
                     <div class="article-pagination__block pagination-prev-left">
                         <a href="<?= get_permalink($get_prew->ID) ?>" class="article-pagination__link">
                             <i class="icon icon-angle-double-left"></i>Предыдущая статья</a>
-                        <a href="<?= get_permalink($get_prew->ID) ?>"  class="wrap-pagination-preview pagination-prev-left">
-                            <div class="preview-article__img">
+                        <div   class="wrap-pagination-preview pagination-prev-left">
+                            <a href="<?= get_permalink($get_prew->ID) ?>" class="preview-article__img">
                                 <img  style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($prew->ID)); ?>')" class="preview-article__image">
-                            </div>
+                            </a>
                             <div class="preview-article__content">
                                 <div class="preview-article__info">
                                     <a href="#" class="post-date"><?= $get_prew->post_date ?></a>
                                 </div>
                                 <div class="preview-article__text"><?= $get_prew->post_title ?></div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 <? } ?>
                 <? $get_next = get_adjacent_post(0, '', 0); ?>
@@ -84,17 +84,19 @@ $next = get_next_post();
                         <a href="<?= get_permalink($get_next->ID) ?>" class="article-pagination__link">Сдедующая статья
                             <i class="icon icon-angle-double-right"></i>
                         </a>
-                        <a href="<?= get_permalink($get_next->ID) ?>" class="wrap-pagination-preview pagination-prev-right">
-                            <div class="preview-article__img">
-                                <img  style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($next->ID)); ?>')" class="preview-article__image">
-                            </div>
-                            <div class="preview-article__content">
+                        <div class="wrap-pagination-preview pagination-prev-right">
+
+                                <a href="<?= get_permalink($get_next->ID) ?>"  class="preview-article__img">
+                                    <img  style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($next->ID)); ?>')" class="preview-article__image">
+                                </a>
+
+                           <div class="preview-article__content">
                                 <div class="preview-article__info">
                                     <a href="#"  class="post-date"><?= $get_next->post_date ?></a>
                                 </div>
                                 <div class="preview-article__text"><?= $get_next->post_title ?></div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 <? } ?>
             </div>
