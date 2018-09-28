@@ -24,9 +24,12 @@ $next = get_next_post();
 
             if ($meta_values != null) {
                 ?>
-                <iframe width="100%" height="415px"
-                        src="https://www.youtube.com/embed/<?= $meta_values ?>"
-                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="k2_video">
+                    <iframe width="100%" height=""
+                            src="https://www.youtube.com/embed/<?= $meta_values ?>"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
             <? } ?>
 
 
