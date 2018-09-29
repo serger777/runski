@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Bedrock](https://roots.io/bedrock/)
 [![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
 [![Build Status](https://img.shields.io/travis/roots/bedrock.svg?style=flat-square)](https://travis-ci.org/roots/bedrock)
@@ -89,3 +90,8 @@ Keep track of development and community news.
 
 [roots-wp-salt]:https://roots.io/salts.html
 [wp-cli-dotenv]:https://github.com/aaemnnosttv/wp-cli-dotenv-command
+=======
+
+# runski
+# runski
+>>>>>>> 05e8c1420c77d58ecf1bf55e2b0e36a66dcfb908
