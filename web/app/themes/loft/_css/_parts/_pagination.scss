@@ -82,7 +82,7 @@
 }
 .preview-article__img{
   display: inline-block;
-  width: 100%;
+  width: 250px;
   height: 250px;
   cursor: pointer;
   @media (max-width: 678px) {
@@ -111,7 +111,7 @@
 
 .pagination-prev-left{
   text-align: left;
-
+  align-items: flex-start;
   .preview-article__content{
   }
 }
@@ -121,7 +121,7 @@
 }
 .pagination-prev-right{
   text-align: right;
-
+align-items: flex-end;
   .preview-article__content{
   }
 }
