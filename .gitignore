@@ -5,6 +5,7 @@ web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+
 */node_modules
 # WordPress
 web/wp
@@ -20,5 +21,4 @@ vendor/*
 !vendor/.gitkeep
 
 .idea
-.htaccess
-.git
+
