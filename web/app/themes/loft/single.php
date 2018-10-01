@@ -66,7 +66,7 @@ $next = get_next_post();
                             <i class="icon icon-angle-double-left"></i>Предыдущая статья</a>
                         <div   class="wrap-pagination-preview pagination-prev-left">
                             <a href="<?= get_permalink($get_prew->ID) ?>" class="preview-article__img">
-                                <img  style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($prew->ID)); ?>')" class="preview-article__image">
+                                <img  style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($get_prew->ID)); ?>')" class="preview-article__image">
                             </a>
                             <div class="preview-article__content">
                                 <div class="preview-article__info">
