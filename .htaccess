@@ -1,4 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+      RewriteRule (.+)\.html?$ http://run-ski.ru/$1/ [R=301,L]
     RewriteRule ^(.*)$ web/$1 [L]
+
 </IfModule>
