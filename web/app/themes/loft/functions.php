@@ -2,6 +2,13 @@
 
 add_theme_support('menus');
 add_theme_support( 'post-thumbnails' );
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action('wp_head', 'wp_shortlink_wp_head');
+remove_action('wp_head','rel_canonical');
+remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
+remove_action( 'wp_head', 'wp_resource_hints', 2 );
 //add_filter('nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10, 4);
 
 //function custom_nav_menu_link_attributes($atts, $item, $args, $depth)
