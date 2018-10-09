@@ -18,7 +18,10 @@ FileETag MTime Size
     ExpiresByType application/x-javascript M31536000
 </IfModule>
 <IfModule mod_headers.c>
+    Header set X-Powered-By "W3 Total Cache/0.9.7"
     Header set Vary "Accept-Encoding"
+    Header set Pragma "public"
+    Header append Cache-Control "public"
 </IfModule>
 # END W3TC Minify cache
 # BEGIN W3TC Minify core
