@@ -19,7 +19,7 @@ $next = get_next_post();
                 <? the_content(false); ?>
             </div>
 
-            <? $meta_values = get_post_meta($post->ID, видео, true);
+            <? $meta_values = get_post_meta($post->ID, 'видео', true);
 
 
             if ($meta_values != null) {
