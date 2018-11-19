@@ -23,6 +23,7 @@ vendor/*
 .idea
 .htaccess
 .git
+
 web/app/themes/loft/node_modules/*
 web/app/cache/
 */node_modules/*

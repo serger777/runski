@@ -19,7 +19,7 @@ $next = get_next_post();
                 <? the_content(false); ?>
             </div>
 
-            <? $meta_values = get_post_meta($post->ID, видео, true);
+            <? $meta_values = get_post_meta($post->ID, 'видео', true);
 
 
             if ($meta_values != null) {
@@ -59,20 +59,21 @@ $next = get_next_post();
 
             <div class="article-pagination">
                 <? $get_prew = get_adjacent_post();
-
+                $prev = get_previous_post();
+                $next = get_next_post();
                 if ($get_prew) { ?>
                     <div class="article-pagination__block pagination-prev-left">
-                        <a href="<?= get_permalink($get_prew->ID) ?>" class="article-pagination__link">
+                        <a href="<?= get_permalink($prev->ID) ?>" class="article-pagination__link">
                             <i class="icon icon-angle-double-left"></i>Предыдущая статья</a>
                         <div   class="wrap-pagination-preview pagination-prev-left">
-                            <a href="<?= get_permalink($get_prew->ID) ?>" class="preview-article__img">
-                                <img  style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($prew->ID)); ?>')" class="preview-article__image">
+                            <a href="<?= get_permalink($prev->ID) ?>" class="preview-article__img">
+                                <img  style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($prev->ID)); ?>')" class="preview-article__image">
                             </a>
                             <div class="preview-article__content">
                                 <div class="preview-article__info">
-                                    <a href="#" class="post-date"><?= $get_prew->post_date ?></a>
+                                    <a href="#" class="post-date"><?= $prev->post_date ?></a>
                                 </div>
-                                <div class="preview-article__text"><?= $get_prew->post_title ?></div>
+                                <div class="preview-article__text"><?= $prev->post_title ?></div>
                             </div>
                         </div>
                     </div>
