@@ -33,7 +33,8 @@
 </footer>
 </div>
 <!-- wrapper_end-->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+1
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
 <script src="<?php bloginfo("template_directory"); ?>/_js/main.js"></script>
 
 

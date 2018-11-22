@@ -12,6 +12,9 @@
   box-sizing: border-box;
   border-bottom: 1px solid #4872a3;
   flex: 1 1 100%;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .top-header__wrap {
@@ -21,14 +24,23 @@
   margin: 0 auto;
 }
 
+.container {
+  display: flex;
+  align-self: flex-start;
+  max-width: 1140px;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 15px;
+
+}
+
 .logotype-block {
   box-sizing: border-box;
-  flex: 1 1 10%;
   align-items: center;
   display: flex;
   .link {
     font-family: 'Lato', sans-serif;
-    font-size: 2.3rem;
+    font-size: 2vw;
     color: #fefefe;
     font-weight: bold;
     line-height: 2.3rem;
@@ -49,7 +61,7 @@
   padding: 20px
 }
 
-.menu{
+.menu {
 
   width: 100%;
   padding-left: 0;
@@ -93,4 +105,88 @@
   align-self: flex-end;
   display: flex;
   justify-content: flex-end;
+}
+
+//mobile
+.mobile-header {
+  width: 100%;
+  background: #4a76a8;
+  box-sizing: border-box;
+  border-bottom: 1px solid #4872a3;
+  flex: 1 1 100%;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+      span{
+        font-size: 16px;
+        color: white!important;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+    }
+    &-burger {
+      &--link {
+        position: relative;
+        padding-left: 1.25em;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+
+          width: 1.1em;
+          height: 0.25em;
+          background: white;
+          box-shadow: 0 0.35em 0 0 white, 0 0.73em 0 0 white;
+        }
+      }
+    }
+  }
+}
+
+
+a:-webkit-any-link {
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mobile_nav {
+  width: 100%;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    .menu-item {
+      display: inline-block;
+      flex-direction: column;
+      a {
+        display: inline-block;
+        padding: 5px;
+        font-size: 14px;
+        font-family: 'Lato', sans-serif;
+
+        color: #fefefe;
+        font-weight: bold;
+        line-height: 1rem;
+        margin-left: 0;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: 1px solid black;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+      }
+    }
+  }
 }
