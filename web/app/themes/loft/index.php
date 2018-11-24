@@ -4,7 +4,7 @@
 <div class="main-content">
     <div class="content-wrapper">
         <div class="content">
-            <h1 class="title-page">Последние новости</h1>
+            <h1 class="title-page">Новости</h1>
             <div class="posts-list">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <!-- post-mini-->

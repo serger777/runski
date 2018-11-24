@@ -6,11 +6,13 @@ var demo = new Vue({
     // Начало модели.
     // Определяем свойства и присваиваем им необходимые значения.
     data: {
-        active: 'home'
+
+        show: false,
+        hide: true
     },
     // Функции, которые будем использовать.
     methods: {
-        makeActive: function(item){
+        onClick: function (item) {
             // Когда модель будет изменена, представление обновится.
             this.active = item;
         }

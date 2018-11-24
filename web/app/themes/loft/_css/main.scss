@@ -15,11 +15,19 @@ img {
   font-family: "Lato", sans-serif;
   color: rgb(33, 33, 33);
   line-height: 2.8rem;
-  margin: 2em 0 1em;
+  @media (max-width: 560px) {
+    font-size: 2rem;
+    color: #212121;
+    line-height: 2.8rem;
+    margin: 3em 0 1em;
+    margin-top: 80px;
+  }
+
+
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "Lato", sans-serif;
   color: black;
   line-height: 1.4rem;

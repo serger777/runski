@@ -110,46 +110,43 @@
 //mobile
 .mobile-header {
   width: 100%;
+  position: fixed;
+  z-index: 10000;
+  flex: 1 1 100%;
   background: #4a76a8;
   box-sizing: border-box;
   border-bottom: 1px solid #4872a3;
-  flex: 1 1 100%;
   @media (min-width: 768px) {
     display: none;
   }
   &__wrap {
     display: flex;
+    background: #4a76a8;
+    box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
     &-logo {
-      span{
-        font-size: 16px;
-        color: white!important;
+      span {
+        font-size: 26px;
+        color: #fff!important;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 700;
+        line-height: 24px;
       }
 
     }
     &-burger {
       &--link {
         position: relative;
-        padding-left: 1.25em;
-
+        font-size: 28px;
+        color: white;
         &:before {
-          content: "";
-          position: absolute;
-          left: 0;
 
-          width: 1.1em;
-          height: 0.25em;
-          background: white;
-          box-shadow: 0 0.35em 0 0 white, 0 0.73em 0 0 white;
         }
       }
     }
   }
 }
-
 
 a:-webkit-any-link {
 
@@ -159,6 +156,9 @@ a:-webkit-any-link {
 
 .mobile_nav {
   width: 100%;
+  background: #4a76a8;
+  box-sizing: border-box;
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -171,7 +171,7 @@ a:-webkit-any-link {
       flex-direction: column;
       a {
         display: inline-block;
-        padding: 5px;
+        padding: 10px 0;
         font-size: 14px;
         font-family: 'Lato', sans-serif;
 
@@ -182,11 +182,34 @@ a:-webkit-any-link {
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
+        &:hover,
+        &:focus,
+        &:active {
+          border-bottom: 1px solid #fff;
+        }
 
       }
     }
   }
+}
+
+.slide-enter-active {
+  transform: translateX(-100%);
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+
+
+}
+
+.slide-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transform: translateX(100%);
+
+}
+.slide-enter, .slide-leave-to {
+  transform: translateX(-100%);
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+
 }

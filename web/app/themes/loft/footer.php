@@ -23,18 +23,18 @@
 
         </div>
         <div class="copyright-wrap">
-            <a href="" class="social_link"><span class="icon-facebook"></span></a>
-            <a href="https://vk.com/id195631390" class="social_link"><span class="icon-vk"></span></a>
-            <a href="" class="social_link"><span class="icon-insta"></span></a>
+            <a target="_blank"  href="https://www.facebook.com/runiski" class="social_link"><span class="icon-facebook"></span></a>
+            <a  target="_blank" href="https://vk.com/id195631390" class="social_link"><span class="icon-vk"></span></a>
+            <a target="_blank"  href="https://www.instagram.com/run_ski.ru/" class="social_link"><span class="icon-insta"></span></a>
 
-            <div class="copyright-text">&copy;&nbsp;2012-2018 <a href="http://run-ski.ru/" class="copyright-text__link"> run-ski.ru</a> </div>
+            <div class="copyright-text">&copy;&nbsp;2012-2018 <a href="http://run-ski.ru/" class="copyright-text__link"><span>RS</span></a> </div>
         </div>
     </div>
 </footer>
 </div>
 <!-- wrapper_end-->
-1
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
 <script src="<?php bloginfo("template_directory"); ?>/_js/main.js"></script>
 
 

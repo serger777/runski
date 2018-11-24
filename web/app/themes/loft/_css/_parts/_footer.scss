@@ -13,6 +13,11 @@
   flex: 1 1 100%;
   align-items: flex-end;
   z-index: 10;
+  @media (max-width: 560px) {
+   flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* Footer Menu */
@@ -23,10 +28,21 @@
 
 .menu2 {
   padding: 0 10px;
+  @media (max-width: 560px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
   li {
     display: inline-block;
     margin-bottom: 5px;
     margin-right: 10px;
+    @media (max-width: 560px) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-right: 0;
+    }
     li:last-child {
       margin-right: 0;
     }
@@ -38,14 +54,14 @@
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
-      border-bottom: 3px solid transparent;
+      border-bottom: 1px solid transparent;
       padding: 6px 0;
       transition: all 0.3s ease;
 
       &:hover,
       &:focus,
       &:active {
-        border-bottom: 3px solid #fff;
+        border-bottom: 1px solid #fff;
       }
     }
   }
@@ -68,8 +84,8 @@
     display: inline-block;
     margin-bottom: 5px;
     @media (max-width: 586px){
-      font-size: 10px!important;
-      padding: 0;
+      font-size: 20px!important;
+      padding: 5px;
     }
   }
 }

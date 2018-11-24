@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/libs.min.css">
-    <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/normalize.css">
+    <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/vendor/normalize.css">
     <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/main.css">
     <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/media.css">
+    <link href="https://unpkg.com/ionicons@4.4.7/dist/css/ionicons.min.css" rel="stylesheet">
+
     <?= wp_head() ?>
 </head>
 <body>
@@ -33,32 +35,35 @@
                 </nav>
             </div>
         </div>
-        <div class="mobile-header " v-bind:class="active" >
+        <div class="mobile-header ">
             <div class="container">
                 <div class="mobile-header__wrap">
 
                     <div class="mobile-header__wrap-logo">
                         <a href="/" class="mobile-header__wrap-logo--link"><span>RS</span></a>
                     </div>
-                    <div class="mobile-header__wrap-burger" >
-                        <a v-on:click="makeActive('active')" href="" v-on:click.prevent class="mobile-header__wrap-burger--link js-menu">
+                    <div class="mobile-header__wrap-burger">
+                        <a @click.prevent="show = !show, hide = !hide" href="" class="mobile-header__wrap-burger--link ">
+                            <i v-show="hide" class="icon ion-md-menu"></i>
+                            <i v-show="show" class="icon ion-ios-close"></i>
                         </a>
                     </div>
-                    <a v-on:click="makeActive('hide')" href="" v-on:click.prevent class="mobile-header__wrap-burger--link js-menu">
-                    </a>
+
                 </div>
-                <nav class="mobile_nav"  >
-                    <ul class="mobile_nav__list">
-                        <?
+                <transition name="slide">
+                    <nav v-show="show" class="mobile_nav">
+                        <ul class="mobile_nav__list">
+                            <?
 
-                        wp_nav_menu(array(
-                            'menu' => 'header_menu',
-                            'menu_class' => 'menu',
-                        ));
-                        ?>
-                    </ul>
+                            wp_nav_menu(array(
+                                'menu' => 'header_menu',
+                                'menu_class' => 'menu',
+                            ));
+                            ?>
+                        </ul>
 
-                </nav>
+                    </nav>
+                </transition>
             </div>
 
         </div>
