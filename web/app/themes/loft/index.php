@@ -23,7 +23,7 @@
                                 the_title(' <div class="post-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">',
                                     '</a></div>');
                                 ?>
-                                <?php echo excerpt(55); ?>
+                               <p> <?php echo excerpt(55); ?></p>
                                </div>
                             <div class="post-content__post-control">
                                 <a href="<?= esc_url(get_permalink()); ?>" class="btn-read-post"> Читать далее </a>
