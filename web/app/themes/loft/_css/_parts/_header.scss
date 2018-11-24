@@ -41,7 +41,7 @@
   .link {
     font-family: 'Lato', sans-serif;
     font-size: 2vw;
-    color: #fefefe;
+    color: #fefefe!important;
     font-weight: bold;
     line-height: 2.3rem;
     margin-left: 3px;
@@ -125,12 +125,13 @@
     align-items: center;
     padding: 15px;
     &-logo {
-      span {
         font-size: 26px;
         color: #fff!important;
         text-decoration: none;
         font-weight: 700;
         line-height: 24px;
+      logo{
+        color: #fff!important;
       }
 
     }
@@ -198,19 +199,18 @@ a:-webkit-any-link {
 
 .slide-enter-active {
   transform: translateX(0%);
-  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 
 
 
 }
 
 .slide-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   transform: translateX(100%);
 
 }
 .slide-enter, .slide-leave {
-  transform: translateX(-100%)!important;
-  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0)!important;
+  transform: translateX(100%)!important;
 
 }
