@@ -36,7 +36,6 @@
             </div>
         </div>
         <div class="mobile-header ">
-            <div class="container">
                 <div class="mobile-header__wrap">
 
                     <div class="mobile-header__wrap-logo">
@@ -50,6 +49,7 @@
                     </div>
 
                 </div>
+
                 <transition name="slide">
                     <nav v-show="show" class="mobile_nav">
                         <ul class="mobile_nav__list">
@@ -64,7 +64,7 @@
 
                     </nav>
                 </transition>
-            </div>
+
 
         </div>
 

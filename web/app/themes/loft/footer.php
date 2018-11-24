@@ -23,9 +23,9 @@
 
         </div>
         <div class="copyright-wrap">
-            <a target="_blank"  href="https://www.facebook.com/runiski" class="social_link"><span class="icon-facebook"></span></a>
-            <a  target="_blank" href="https://vk.com/id195631390" class="social_link"><span class="icon-vk"></span></a>
-            <a target="_blank"  href="https://www.instagram.com/run_ski.ru/" class="social_link"><span class="icon-insta"></span></a>
+            <a target="_blank"  href="https://www.facebook.com/runiski" class="social_link"><i class="icon ion-logo-facebook"></i></a>
+            <a  target="_blank" href="https://vk.com/id195631390" class="social_link"><i class="icon ion-logo-vk"></i></a>
+            <a target="_blank"  href="https://www.instagram.com/run_ski.ru/" class="social_link"><i class="icon ion-logo-instagram"></i></a>
 
             <div class="copyright-text">&copy;&nbsp;2012-2018 <a href="http://run-ski.ru/" class="copyright-text__link"><span>RS</span></a> </div>
         </div>
