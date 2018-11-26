@@ -11,7 +11,7 @@ $next = get_next_post();
                 the_post(); ?>
                 <? the_title(); ?>
             </div>
-            <div class="article-image"><img src="<?php the_post_thumbnail_url() ?>" alt="Image поста"></div>
+            <div class="article-image"><img src="<?php the_post_thumbnail_url() ?>" title="<?php wp_title(); ?>" alt="<?php wp_title(); ?>"></div>
             <div class="article-info">
                 <div class="post-date"><? the_date(); ?></div>
             </div>
@@ -39,14 +39,14 @@ $next = get_next_post();
             ?>
 
             <? if ($file['url'] != null) { ?>
-                <a class="link" download href="<?= $file['url'] ?>">Скачать протоколы соровнований </a> <br>
+                <a class="link" download href="<?= $file['url'] ?>">Протоколы соровнований </a> <br>
             <? } ?>
             <?php
             $file2 = (get_post_meta($post->ID, 'файл2', false));
             $file2 = get_field('файл2');
             ?>
             <? if ($file2['url'] != null) { ?>
-                <a class="link" download href="<?= $file2['url'] ?>">Скачать протоколы соровнований </a>
+                <a class="link" download href="<?= $file2['url'] ?>">Протоклы соровнований </a>
             <? } ?>
             <p class="autor_title">
                 Автор: <span><?= get_the_author_meta('first_name'); ?></span>
