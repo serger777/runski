@@ -133,3 +133,15 @@ function wpbeginner_numeric_posts_nav()
 // REMOVE EMOJI ICONS
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
+
+function title($limit) {
+    $excerpt = explode(' ', get_the_title(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+    $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+    return $excerpt;
+}

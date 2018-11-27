@@ -11,7 +11,7 @@ $next = get_next_post();
                 the_post(); ?>
                 <? the_title(); ?>
             </div>
-            <div class="article-image"><img src="<?php the_post_thumbnail_url() ?>" title="<?php wp_title(); ?>" alt="<?php wp_title(); ?>"></div>
+            <div class="article-image"><img src="<?php the_post_thumbnail_url() ?>" title="<?= title("6") ?>" alt="<?= title(6) ?>"></div>
             <div class="article-info">
                 <div class="post-date"><? the_date(); ?></div>
             </div>
