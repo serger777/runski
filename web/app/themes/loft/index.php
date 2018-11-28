@@ -4,14 +4,14 @@
 <div class="main-content">
     <div class="content-wrapper">
         <div class="content">
-            <h1 class="title-page">Новости</h1>
+
             <div class="posts-list">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <!-- post-mini-->
                     <div class="post-wrap">
                         <div class="post-thumbnail">
                             <div class="img_thumb" style="background-image: url('<?= the_post_thumbnail_url() ?>')">
-                        </div>
+                            </div>
                         </div>
 
                         <div class="post-content">
@@ -23,8 +23,8 @@
                                 the_title(' <div class="post-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">',
                                     '</a></div>');
                                 ?>
-                               <p> <?php echo excerpt(55); ?></p>
-                               </div>
+                                <p> <?php echo excerpt(55); ?></p>
+                            </div>
                             <div class="post-content__post-control">
                                 <a href="<?= esc_url(get_permalink()); ?>" class="btn-read-post"> Читать далее </a>
 

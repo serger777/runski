@@ -1,5 +1,13 @@
 <div class="sidebar">
     <div class="sidebar__sidebar-item">
+        <?php if (!is_home()): ?>
+            <a itemprop="name" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+
+        <?php else : ?>
+            <h1 itemprop="name"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+
+        <?php endif; ?>
+        <span itemprop="description"><?php bloginfo('description'); ?></span>
         <div class="sidebar-item__title">Категории</div>
         <div class="sidebar-item__content">
             <ul class="category-list">

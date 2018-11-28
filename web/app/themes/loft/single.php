@@ -4,18 +4,24 @@ $prev = get_previous_post();
 $next = get_next_post();
 ?>
 <div class="main-content">
-    <div class="content-wrapper">
+    <div class="content-wrapper" class="PostText" itemscope itemtype="http://schema.org/Article">
         <div class="content">
             <div class="article-title title-page">
                 <?php if (have_posts()) : while (have_posts()) :
                 the_post(); ?>
-                <? the_title(); ?>
+
+
+                <div class="postheader">
+                    <h1 itemprop="headline"><?php the_title(); ?></h1>
+                </div>
+
             </div>
             <div class="article-image"><img src="<?php the_post_thumbnail_url() ?>" title="<?= title("6") ?>" alt="<?= title(6) ?>"></div>
             <div class="article-info">
-                <div class="post-date"><? the_date(); ?></div>
+                <span class="post-date" itemprop="articleSection"><?php the_category(',') ?></span>
+                <div class="post-date" itemprop="datePublished"><? the_date(); ?></div>
             </div>
-            <div class="article-text">
+            <div class="article-text" itemprop="articleBody">
                 <? the_content(false); ?>
             </div>
 
@@ -49,7 +55,7 @@ $next = get_next_post();
                 <a class="link" download href="<?= $file2['url'] ?>">Протоклы соровнований </a>
             <? } ?>
             <p class="autor_title">
-                Автор: <span><?= get_the_author_meta('first_name'); ?></span>
+                Автор: <span itemprop="author"><?= get_the_author_meta('first_name'); ?></span>
             </p>
 
             <?php endwhile; else : ?>

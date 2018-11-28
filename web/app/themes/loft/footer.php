@@ -10,7 +10,7 @@
  */
 
 ?>
-<footer class="main-footer">
+<footer class="main-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
     <div class="content-footer">
         <div class="bottom-menu">
                          <?

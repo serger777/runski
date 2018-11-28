@@ -2,8 +2,7 @@
 //define('WP_CACHE', true);
 add_theme_support('menus');
 add_theme_support( 'post-thumbnails' );
-add_theme_support('menus');
-add_theme_support( 'post-thumbnails' );
+
 remove_action( 'wp_head', 'wp_generator' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
 remove_action( 'wp_head', 'rsd_link' );
