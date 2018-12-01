@@ -46,7 +46,7 @@ $next = get_next_post();
             ?>
 
             <? if ($file['url'] != null) { ?>
-                <a class="link_pdf" download href="<?= $file['url'] ?>">Протоколы  <i class="icon ion-md-attach"></i> </a> <br>
+                <a class="link_pdf" download href="<?= $file['url'] ?>">Протоколы  <i class="icon ion-md-attach"></i></a> <br>
             <? } ?>
             <?php
             $file2 = (get_post_meta($post->ID, 'файл2', false));
