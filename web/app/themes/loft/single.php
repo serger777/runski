@@ -18,8 +18,9 @@ $next = get_next_post();
             </div>
             <div class="article-image"><img src="<?php the_post_thumbnail_url() ?>" title="<?= title("6") ?>" alt="<?= title(6) ?>"></div>
             <div class="article-info">
-                <span class="post-date" itemprop="articleSection"><?php the_category(',') ?></span>
                 <div class="post-date" itemprop="datePublished"><? the_date(); ?></div>
+                <span class="post-category" itemprop="articleSection">Категория:<?php the_category(',') ?></span>
+
             </div>
             <div class="article-text" itemprop="articleBody">
                 <? the_content(false); ?>
@@ -45,14 +46,14 @@ $next = get_next_post();
             ?>
 
             <? if ($file['url'] != null) { ?>
-                <a class="link" download href="<?= $file['url'] ?>">Протоколы соровнований </a> <br>
+                <a class="link_pdf" download href="<?= $file['url'] ?>">Протоколы соревнований <i class="icon ion-md-attach"></i> </a> <br>
             <? } ?>
             <?php
             $file2 = (get_post_meta($post->ID, 'файл2', false));
             $file2 = get_field('файл2');
             ?>
             <? if ($file2['url'] != null) { ?>
-                <a class="link" download href="<?= $file2['url'] ?>">Протоклы соровнований </a>
+                <a class="link_pdf" download href="<?= $file2['url'] ?>">Протоклы соровнований <i class="icon ion-md-attach"></i></a>
             <? } ?>
             <p class="autor_title">
                 Автор: <span itemprop="author"><?= get_the_author_meta('first_name'); ?></span>
