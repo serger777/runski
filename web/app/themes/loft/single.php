@@ -46,14 +46,14 @@ $next = get_next_post();
             ?>
 
             <? if ($file['url'] != null) { ?>
-                <a class="link_pdf" download href="<?= $file['url'] ?>">Протоколы соревнований <i class="icon ion-md-attach"></i> </a> <br>
+                <a class="link_pdf" download href="<?= $file['url'] ?>">Протоколы  <i class="icon ion-md-attach"></i> </a> <br>
             <? } ?>
             <?php
             $file2 = (get_post_meta($post->ID, 'файл2', false));
             $file2 = get_field('файл2');
             ?>
             <? if ($file2['url'] != null) { ?>
-                <a class="link_pdf" download href="<?= $file2['url'] ?>">Протоклы соровнований <i class="icon ion-md-attach"></i></a>
+                <a class="link_pdf" download href="<?= $file2['url'] ?>">Протоклы  <i class="icon ion-md-attach"></i></a>
             <? } ?>
             <p class="autor_title">
                 Автор: <span itemprop="author"><?= get_the_author_meta('first_name'); ?></span>
