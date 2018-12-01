@@ -1,28 +1,28 @@
-User-agent: *               # РѕР±С‰РёРµ РїСЂР°РІРёР»Р° РґР»СЏ СЂРѕР±РѕС‚РѕРІ, РєСЂРѕРјРµ РЇРЅРґРµРєСЃР° Рё Google,
-                            # С‚.Рє. РґР»СЏ РЅРёС… РїСЂР°РІРёР»Р° РЅРёР¶Рµ
-Disallow: /cgi-bin          # РїР°РїРєР° РЅР° С…РѕСЃС‚РёРЅРіРµ
-Disallow: /?                # РІСЃРµ РїР°СЂР°РјРµС‚СЂС‹ Р·Р°РїСЂРѕСЃР° РЅР° РіР»Р°РІРЅРѕР№
-Disallow: /web/wp/wp-              # РІСЃРµ С„Р°Р№Р»С‹ WP: /web/wp/wp-json/, /web/wp/wp-includes, /web/wp/wp-content/plugins
+User-agent: *               # общие правила для роботов, кроме Яндекса и Google,
+                            # т.к. для них правила ниже
+Disallow: /cgi-bin          # папка на хостинге
 
-                            # РїСЂР°РІРёР»Рѕ РјРѕР¶РЅРѕ СѓРґР°Р»РёС‚СЊ)
-Disallow: *?s=              # РїРѕРёСЃРє
-Disallow: *&s=              # РїРѕРёСЃРє
-Disallow: /search/          # РїРѕРёСЃРє
-Disallow: /author/          # Р°СЂС…РёРІ Р°РІС‚РѕСЂР°
-Disallow: /users/           # Р°СЂС…РёРІ Р°РІС‚РѕСЂРѕРІ
-Disallow: */trackback       # С‚СЂРµРєР±РµРєРё, СѓРІРµРґРѕРјР»РµРЅРёСЏ РІ РєРѕРјРјРµРЅС‚Р°СЂРёСЏС… Рѕ РїРѕСЏРІР»РµРЅРёРё РѕС‚РєСЂС‹С‚РѕР№
-                            # СЃСЃС‹Р»РєРё РЅР° СЃС‚Р°С‚СЊСЋ
-Disallow: */feed            # РІСЃРµ С„РёРґС‹
-Disallow: */rss             # rss С„РёРґ
-Disallow: */embed           # РІСЃРµ РІСЃС‚СЂР°РёРІР°РЅРёСЏ
-Disallow: */wlwmanifest.xml # xml-С„Р°Р№Р» РјР°РЅРёС„РµСЃС‚Р° Windows Live Writer (РµСЃР»Рё РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚Рµ,
-                            # РїСЂР°РІРёР»Рѕ РјРѕР¶РЅРѕ СѓРґР°Р»РёС‚СЊ)
-Disallow: /xmlrpc.php       # С„Р°Р№Р» WordPress API
-Disallow: *utm*=             # СЃСЃС‹Р»РєРё СЃ utm-РјРµС‚РєР°РјРё
-Disallow: *openstat=        # СЃСЃС‹Р»РєРё СЃ РјРµС‚РєР°РјРё openstat
-Allow: */uploads            # РѕС‚РєСЂС‹РІР°РµРј РїР°РїРєСѓ СЃ С„Р°Р№Р»Р°РјРё uploads
+Disallow: /web/wp/wp-              # все файлы WP: /web/wp/wp-json/, /web/wp/wp-includes, /web/wp/wp-content/plugins
 
-User-agent: GoogleBot       # РїСЂР°РІРёР»Р° РґР»СЏ Google (РєРѕРјРјРµРЅС‚Р°СЂРёРё РЅРµ РґСѓР±Р»РёСЂСѓСЋ)
+                            # правило можно удалить)
+Disallow: *?s=              # поиск
+Disallow: *&s=              # поиск
+Disallow: /search/          # поиск
+Disallow: /author/          # архив автора
+Disallow: /users/           # архив авторов
+Disallow: */trackback       # трекбеки, уведомления в комментариях о появлении открытой
+                            # ссылки на статью
+Disallow: */feed            # все фиды
+Disallow: */rss             # rss фид
+Disallow: */embed           # все встраивания
+Disallow: */wlwmanifest.xml # xml-файл манифеста Windows Live Writer (если не используете,
+                            # правило можно удалить)
+Disallow: /xmlrpc.php       # файл WordPress API
+Disallow: *utm*=             # ссылки с utm-метками
+Disallow: *openstat=        # ссылки с метками openstat
+Allow: */uploads            # открываем папку с файлами uploads
+
+User-agent: GoogleBot       # правила для Google (комментарии не дублирую)
 Disallow: /cgi-bin
 Disallow: /?
 Disallow: /web/wp/wp-
@@ -41,15 +41,15 @@ Disallow: /xmlrpc.php
 Disallow: *utm*=
 Disallow: *openstat=
 Allow: */uploads
-Allow: /*/*.js              # РѕС‚РєСЂС‹РІР°РµРј js-СЃРєСЂРёРїС‚С‹ РІРЅСѓС‚СЂРё /web/wp/wp- (/*/ - РґР»СЏ РїСЂРёРѕСЂРёС‚РµС‚Р°)
-Allow: /*/*.css             # РѕС‚РєСЂС‹РІР°РµРј css-С„Р°Р№Р»С‹ РІРЅСѓС‚СЂРё /web/wp/wp- (/*/ - РґР»СЏ РїСЂРёРѕСЂРёС‚РµС‚Р°)
-Allow: /web/wp/wp-*.png            # РєР°СЂС‚РёРЅРєРё РІ РїР»Р°РіРёРЅР°С…, cache РїР°РїРєРµ Рё С‚.Рґ.
-Allow: /web/wp/wp-*.jpg            # РєР°СЂС‚РёРЅРєРё РІ РїР»Р°РіРёРЅР°С…, cache РїР°РїРєРµ Рё С‚.Рґ.
-Allow: /web/wp/wp-*.jpeg           # РєР°СЂС‚РёРЅРєРё РІ РїР»Р°РіРёРЅР°С…, cache РїР°РїРєРµ Рё С‚.Рґ.
-Allow: /web/wp/wp-*.gif            # РєР°СЂС‚РёРЅРєРё РІ РїР»Р°РіРёРЅР°С…, cache РїР°РїРєРµ Рё С‚.Рґ.
-Allow: /web/wp/wp-admin/admin-ajax.php # РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїР»Р°РіРёРЅР°РјРё, С‡С‚РѕР±С‹ РЅРµ Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ JS Рё CSS
+Allow: /*/*.js              # открываем js-скрипты внутри /web/wp/wp- (/*/ - для приоритета)
+Allow: /*/*.css             # открываем css-файлы внутри /web/wp/wp- (/*/ - для приоритета)
+Allow: /web/wp/wp-*.png            # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-*.jpg            # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-*.jpeg           # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-*.gif            # картинки в плагинах, cache папке и т.д.
+Allow: /web/wp/wp-admin/admin-ajax.php # используется плагинами, чтобы не блокировать JS и CSS
 
-User-agent: Yandex          # РїСЂР°РІРёР»Р° РґР»СЏ РЇРЅРґРµРєСЃР° (РєРѕРјРјРµРЅС‚Р°СЂРёРё РЅРµ РґСѓР±Р»РёСЂСѓСЋ)
+User-agent: Yandex          # правила для Яндекса (комментарии не дублирую)
 Disallow: /cgi-bin
 Disallow: /?
 Disallow: /web/wp/wp-
@@ -73,17 +73,17 @@ Allow: /web/wp/wp-*.jpg
 Allow: /web/wp/wp-*.jpeg
 Allow: /web/wp/wp-*.gif
 Allow: /web/wp/wp-admin/admin-ajax.php
-Clean-Param: utm_source&utm_medium&utm_campaign # РЇРЅРґРµРєСЃ СЂРµРєРѕРјРµРЅРґСѓРµС‚ РЅРµ Р·Р°РєСЂС‹РІР°С‚СЊ
-                            # РѕС‚ РёРЅРґРµРєСЃРёСЂРѕРІР°РЅРёСЏ, Р° СѓРґР°Р»СЏС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РјРµС‚РѕРє,
-                            # Google С‚Р°РєРёРµ РїСЂР°РІРёР»Р° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚
-Clean-Param: openstat       # Р°РЅР°Р»РѕРіРёС‡РЅРѕ
+Clean-Param: utm_source&utm_medium&utm_campaign # Яндекс рекомендует не закрывать
+                            # от индексирования, а удалять параметры меток,
+                            # Google такие правила не поддерживает
+Clean-Param: openstat       # аналогично
 
-# РЈРєР°Р¶РёС‚Рµ РѕРґРёРЅ РёР»Рё РЅРµСЃРєРѕР»СЊРєРѕ С„Р°Р№Р»РѕРІ Sitemap (РґСѓР±Р»РёСЂРѕРІР°С‚СЊ РґР»СЏ РєР°Р¶РґРѕРіРѕ User-agent
-# РЅРµ РЅСѓР¶РЅРѕ). Google XML Sitemap СЃРѕР·РґР°РµС‚ 2 РєР°СЂС‚С‹ СЃР°Р№С‚Р°, РєР°Рє РІ РїСЂРёРјРµСЂРµ РЅРёР¶Рµ.
+# Укажите один или несколько файлов Sitemap (дублировать для каждого User-agent
+# не нужно). Google XML Sitemap создает 2 карты сайта, как в примере ниже.
 Sitemap: http://run-ski.ru/sitemap.xml
 Sitemap: http://run-ski.ru/sitemap.xml.gz
 
-# РЈРєР°Р¶РёС‚Рµ РіР»Р°РІРЅРѕРµ Р·РµСЂРєР°Р»Рѕ СЃР°Р№С‚Р°, РєР°Рє РІ РїСЂРёРјРµСЂРµ РЅРёР¶Рµ (СЃ WWW / Р±РµР· WWW, РµСЃР»Рё HTTPS
-# С‚Рѕ РїРёС€РµРј РїСЂРѕС‚РѕРєРѕР», РµСЃР»Рё РЅСѓР¶РЅРѕ СѓРєР°Р·Р°С‚СЊ РїРѕСЂС‚, СѓРєР°Р·С‹РІР°РµРј). РљРѕРјР°РЅРґСѓ Host РїРѕРЅРёРјР°РµС‚
-# РЇРЅРґРµРєСЃ Рё Mail.RU, Google РЅРµ СѓС‡РёС‚С‹РІР°РµС‚.
+# Укажите главное зеркало сайта, как в примере ниже (с WWW / без WWW, если HTTPS
+# то пишем протокол, если нужно указать порт, указываем). Команду Host понимает
+# Яндекс и Mail.RU, Google не учитывает.
 Host: run-ski.ru
