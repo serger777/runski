@@ -144,3 +144,4 @@ function title($limit) {
     $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
     return $excerpt;
 }
+?>
