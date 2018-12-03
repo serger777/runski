@@ -20,7 +20,7 @@
         <div class="top-header">
             <div class="top-header__wrap">
                 <div class="logotype-block">
-                    <div class="logo-wrap"><a title="бег, лыжи, триатлон" href="/" class="link"><logo>RS</logo></a></div>
+                    <div class="logo-wrap"><a title="бег, лыжи, триатлон" href="/" class="link"><div class="logo">RS</div></a></div>
                 </div>
                 <nav class="main-navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
                     <ul class="nav-list">
@@ -40,7 +40,7 @@
                 <div class="mobile-header__wrap">
 
                     <div class="mobile-header__wrap-logo">
-                        <a  title="бег, лыжи, триатлон" href="/" class="mobile-header__wrap-logo--link"><logo>RS</logo></a>
+                        <a  title="бег, лыжи, триатлон" href="/" class="mobile-header__wrap-logo--link"><div class="logo">RS</div></a>
                     </div>
                     <div class="mobile-header__wrap-burger">
                         <a @click.prevent="show = !show, hide = !hide" href="" class="mobile-header__wrap-burger--link ">
