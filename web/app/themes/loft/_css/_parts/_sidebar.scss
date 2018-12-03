@@ -10,7 +10,19 @@
   box-shadow: 0 2px 4px 1px rgba(54, 73, 86, 0.35);
   padding: 10px 10px 5px;
   margin-bottom: 35px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato";
+  a{
+    font-family: "Lato";
+    font-size: 16px;
+  }
+  h1{
+    font-family: "Lato";
+    font-size: 16px;
+  }
+  &--desk{
+    font-size: 14px;
+    font-family: "Lato";
+  }
 }
 
 .sidebar-item__title {

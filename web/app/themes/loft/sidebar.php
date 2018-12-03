@@ -8,7 +8,7 @@
 
         <?php endif; ?>
         </br>
-        <span itemprop="description"><?php bloginfo('description'); ?></span>
+        <span class="sidebar__sidebar-item--desk" itemprop="description"><?php bloginfo('description'); ?></span>
         <div class="sidebar-item__title">Категории</div>
         <div class="sidebar-item__content">
             <ul class="category-list">
