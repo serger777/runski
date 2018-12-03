@@ -62,12 +62,12 @@
         </div>
 
     </div>
-    <div class="sidebar__sidebar-item">
-        <div class="sidebar-item__title">Новости месяца</div>
-        <ul class="category-list wp_calendar">
-            <?php get_calendar(); ?>
-        </ul>
-    </div>
+<!--    <div class="sidebar__sidebar-item">-->
+<!--        <div class="sidebar-item__title">Новости месяца</div>-->
+<!--        <ul class="category-list wp_calendar">-->
+<!--            --><?php //get_calendar(); ?>
+<!--        </ul>-->
+<!--    </div>-->
     <div class="field">
         <? the_field('описание'); ?>
     </div>
