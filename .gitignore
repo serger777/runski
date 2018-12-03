@@ -21,7 +21,7 @@ vendor/*
 !vendor/.gitkeep
 
 .idea
-.htaccess
+/.htaccess
 .git
 
 web/app/themes/loft/node_modules/*

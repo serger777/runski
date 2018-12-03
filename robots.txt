@@ -1,10 +1,10 @@
 User-agent: *               # общие правила для роботов, кроме Яндекса и Google,
                             # т.к. для них правила ниже
 Disallow: /cgi-bin          # папка на хостинге
-Disallow: /?                # все параметры запроса на главной
+                            # все параметры запроса на главной
 Disallow: /web/wp/wp-              # все файлы WP: /web/wp/wp-json/, /web/wp/wp-includes, /web/wp/wp-content/plugins
 
-                            # правило можно удалить)
+
 Disallow: *?s=              # поиск
 Disallow: *&s=              # поиск
 Disallow: /search/          # поиск
@@ -51,7 +51,7 @@ Allow: /web/wp/wp-admin/admin-ajax.php # используется плагина
 
 User-agent: Yandex          # правила для Яндекса (комментарии не дублирую)
 Disallow: /cgi-bin
-Disallow: /?
+
 Disallow: /web/wp/wp-
 Disallow: /web/wp/wp/
 Disallow: *?s=
