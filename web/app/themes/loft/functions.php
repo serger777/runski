@@ -182,6 +182,10 @@ function add_meta_tags() {
         $meta= str_replace('=', '', $meta);
         $meta= str_replace('>', '', $meta);
         $meta= str_replace('text-align', '', $meta);
+        $meta= str_replace('\"', '', $meta);
+        $meta= str_replace('"', '', $meta);
+        $meta= str_replace(':', '', $meta);
+        $meta= str_replace(';', '', $meta);
         $meta = substr( $meta, 5, 140 );
         $meta= str_replace('', '', $meta);
 
