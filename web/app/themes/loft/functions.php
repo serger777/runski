@@ -169,9 +169,9 @@ function add_meta_tags() {
 
         $meta = strip_shortcodes( $post->post_content );
 
-        $meta = str_replace( array("\n", "\r", "\t",  ), ' ', $meta );
-        $meta = preg_replace('/[^a-zA-Zа-яА-Я0-9]/ui', '',$meta );
-        $meta = substr( $meta, 0, 10 );
+        $meta = str_replace( array("\n", "\r", "\t"  ), ' ', $meta );
+        $meta = preg_replace('/[^а-яёa-z,]/iu', '',$meta );
+        $meta = substr( $meta, 0, 140 );
         $meta= str_replace('', '', $meta);
 
 
