@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
     <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/libs.min.css">
     <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/vendor/normalize.css">
     <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/_css/main.css">
