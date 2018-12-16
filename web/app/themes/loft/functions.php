@@ -183,7 +183,7 @@ function add_meta_tags() {
 
         }
 
-        echo '<meta name="description" content="' . $meta . ' ..." />' . "\n";
+        echo '<meta name="description" content="' . $meta . '" />' . "\n";
 
         echo '<meta name="keywords" content="' . $metakeywords . '" />' . "\n";
 
