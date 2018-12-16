@@ -176,7 +176,13 @@ function add_meta_tags() {
         $meta= str_replace('</p>', '', $meta);
         $meta= str_replace('<em>', '', $meta);
         $meta= str_replace('</em>', '', $meta);
-        $meta = substr( $meta, 0, 140 );
+        $meta= str_replace('justify', '', $meta);
+        $meta= str_replace('style', '', $meta);
+        $meta= str_replace('<p', '', $meta);
+        $meta= str_replace('=', '', $meta);
+        $meta= str_replace('>', '', $meta);
+        $meta= str_replace('text-align', '', $meta);
+        $meta = substr( $meta, 10, 140 );
         $meta= str_replace('', '', $meta);
 
 
