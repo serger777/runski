@@ -23,7 +23,7 @@
 
         </div>
         <div class="copyright-wrap">
-            <a target="_blank"  href="https://www.facebook.com/runiski" class="social_link"><i class="icon ion-logo-facebook"></i></a>
+            <a target="_blank"  href="https://www.facebook.com/runskiru" class="social_link"><i class="icon ion-logo-facebook"></i></a>
             <a  target="_blank" href="https://vk.com/id195631390" class="social_link"><i class="icon ion-logo-vk"></i></a>
             <a target="_blank"  href="https://www.instagram.com/run_ski.ru/" class="social_link"><i class="icon ion-logo-instagram"></i></a>
 

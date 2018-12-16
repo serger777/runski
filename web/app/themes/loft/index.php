@@ -19,10 +19,9 @@
                                 <div class="post-date"><? the_date(); ?></div>
                             </div>
                             <div class="post-content__post-text">
-                                <?
-                                the_title(' <div class="post-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">',
-                                    '</a></div>');
-                                ?>
+                                <div class="post-title"><a href="<?= esc_url(get_permalink()); ?>" title="<?=get_the_title()?>" rel="bookmark"><?=get_the_title()?></a></div>
+
+
                                 <p> <?php echo excerpt(55); ?></p>
                             </div>
                             <div class="post-content__post-control">
