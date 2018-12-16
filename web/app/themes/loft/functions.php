@@ -186,7 +186,7 @@ function add_meta_tags() {
         $meta= str_replace('"', '', $meta);
         $meta= str_replace(':', '', $meta);
         $meta= str_replace(';', '', $meta);
-        $meta = substr( $meta, 0, 140 );
+        $meta = substr( $meta, 0, 160 );
         $meta= str_replace('', '', $meta);
 
 
