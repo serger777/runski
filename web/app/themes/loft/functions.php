@@ -169,7 +169,7 @@ function add_meta_tags() {
 
         $meta = strip_shortcodes( $post->post_content );
 
-        $meta = str_replace( array("\n", "\r", "\t", "\<strong>", "\</strong>", "\<p>", "\</p>", "\<em>", "\</em>" ), ' ', $meta );
+        $meta = str_replace( array("\n", "\r", "\t", "\<strong>", "\</strong>", "\<p>", "\</p>", "\<em>", "\</em>", "\<p style=\"\text-align: \justify;\">",  ), ' ', $meta );
 
         $meta = substr( $meta, 0, 160 );
         $meta= str_replace('', '', $meta);
