@@ -171,7 +171,7 @@ function add_meta_tags() {
 
         $meta = str_replace( array("\n", "\r", "\t", "\<strong>", "\</strong>", "\<p>", "\</p>", "\<em>", "\</em>" ), ' ', $meta );
 
-        $meta = substr( $meta, 0, 140 );
+        $meta = substr( $meta, 0, 160 );
         $meta= str_replace('', '', $meta);
 
 
