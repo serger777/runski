@@ -174,7 +174,8 @@ function add_meta_tags()
         $meta = str_replace(array(
             "\n",
             "\r",
-            "\t"
+            "\t",
+            "\""
         ), '', $meta);
         $meta = strip_tags($meta, '');
         $meta = substr($meta, 0, 160);
