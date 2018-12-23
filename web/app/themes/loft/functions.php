@@ -2,7 +2,7 @@
 //define('WP_CACHE', true);
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
-add_action( 'wp_head', 'add_meta_tags' , 1 );
+add_action('wp_head', 'add_meta_tags', 1);
 
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wlwmanifest_link');
@@ -152,49 +152,35 @@ function title($limit)
 }
 
 
-function wph_cut_by_words($maxlen, $text) {
-    $len = (mb_strlen($text) > $maxlen)? mb_strripos(mb_substr($text, 0, $maxlen), ' ') : $maxlen;
+function wph_cut_by_words($maxlen, $text)
+{
+    $len = (mb_strlen($text) > $maxlen) ? mb_strripos(mb_substr($text, 0, $maxlen), ' ') : $maxlen;
     $cutStr = mb_substr($text, 0, $len);
-    $temp = (mb_strlen($text) > $maxlen)? $cutStr. '...' : $cutStr;
+    $temp = (mb_strlen($text) > $maxlen) ? $cutStr . '...' : $cutStr;
     return $temp;
 }
 
-function add_meta_tags() {
+function add_meta_tags()
+{
 
     global $post;
 
-    if ( is_single() ) {
+    if (is_single()) {
 
-        $meta = strip_tags( $post->post_content );
+        $meta = strip_tags($post->post_content);
 
-        $meta = strip_shortcodes( $post->post_content );
+        $meta = strip_shortcodes($post->post_content);
 
-        $meta = str_replace( array("\n", "\r", "\t" ), ' ', $meta );
-        $meta= str_replace('</strong>', '', $meta);
-        $meta= str_replace('<strong>', '', $meta);
-        $meta= str_replace('<p>', '', $meta);
-        $meta= str_replace('</p>', '', $meta);
-        $meta= str_replace('<em>', '', $meta);
-        $meta= str_replace('</em>', '', $meta);
-        $meta= str_replace('justify', '', $meta);
-        $meta= str_replace('style', '', $meta);
-        $meta= str_replace('<p', '', $meta);
-        $meta= str_replace('=', '', $meta);
-        $meta= str_replace('>', '', $meta);
-        $meta= str_replace('text-align', '', $meta);
-        $meta= str_replace('\"', '', $meta);
-        $meta= str_replace('"', '', $meta);
-        $meta= str_replace(':', '', $meta);
-        $meta= str_replace(';', '', $meta);
-        $meta = substr( $meta, 0, 160 );
-        $meta= str_replace('', '', $meta);
-
-
-        $keywords = get_the_category( $post->ID );
-
+        $meta = str_replace(array(
+            "\n",
+            "\r",
+            "\t"
+        ), '', $meta);
+        $meta = strip_tags($meta, '');
+        $meta = substr($meta, 0, 160);
+       $keywords = get_the_category($post->ID);
         $metakeywords = '';
-
-        foreach ( $keywords as $keyword ) {
+        foreach ($keywords as $keyword) {
 
             $metakeywords .= $keyword->cat_name . ", бег, лыжи ";
 
