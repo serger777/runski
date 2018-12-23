@@ -23,7 +23,7 @@
                 <div class="logotype-block">
                     <div class="logo-wrap"><a title="бег, лыжи, триатлон" href="/" class="link"><div class="logo">RS</div></a></div>
                 </div>
-                <nav class="main-navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                <nav role="navigation" class="main-navigation" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
                     <ul class="nav-list">
                         <?
 

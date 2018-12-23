@@ -178,7 +178,7 @@ function add_meta_tags()
             "\""
         ), '', $meta);
         $meta = strip_tags($meta, '');
-        $meta = substr($meta, 0, 160);
+        $meta = substr($meta, 0, 200);
        $keywords = get_the_category($post->ID);
         $metakeywords = '';
         foreach ($keywords as $keyword) {
