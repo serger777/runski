@@ -45,8 +45,8 @@ $next = get_next_post();
                 ?>
                 <div class="k2_video">
                     <iframe width="100%" height="300px"
-                            src="https://www.youtube.com/embed/<?= $meta_values2 ?>"
-                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            src="<?= $meta_values2 ?>"
+                           allowfullscreen></iframe>
 
                 </div>
 
