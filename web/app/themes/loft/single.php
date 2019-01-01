@@ -38,6 +38,17 @@ $next = get_next_post();
                 </div>
 
             <? } ?>
+            <? $meta_values2 = get_post_meta($post->ID, 'VIDEO', true);
+
+
+            if ($meta_values2 != null) {
+                ?>
+                <div class="k2_video">
+
+                    <video style="width=100%; height=300px" src="<?= $meta_values ?>"></video>
+                </div>
+
+            <? } ?>
 
 
             <?php
