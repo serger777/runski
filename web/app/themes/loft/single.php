@@ -45,7 +45,7 @@ $next = get_next_post();
                 ?>
                 <div class="k2_video">
 
-                    <video style="width=100%; height=300px" src="<?= $meta_values ?>"></video>
+                    <video style="width=100%; height=300px" src="<?= $meta_values2 ?>"></video>
                 </div>
 
             <? } ?>
