@@ -44,8 +44,10 @@ $next = get_next_post();
             if ($meta_values2 != null) {
                 ?>
                 <div class="k2_video">
+                    <iframe width="100%" height="300px"
+                            src="https://www.youtube.com/embed/<?= $meta_values2 ?>"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-                    <video style="width=100%; height=300px" src="<?= $meta_values2 ?>"></video>
                 </div>
 
             <? } ?>
